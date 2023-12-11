@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@import './px-to-rem.scss';
+@import './input.scss';
+:root{
+  --dark-grey: #24232C;
+  --grey: #817D92;
+  --almost-white: #E6E5EA;
+  --very-dark-grey: #18171F;
+  --neon-green: #A4FFAF;
+  --red: #F64A4A;
+  --orange: #FB7C58;
+  --yellow: #F8CD65;
+}
+
+body{
+  margin: 0;
+}
+
+h1{
+  font-size: rem(24);
+  line-height: rem(31);
+  margin: 0;
+}
+
+h2{
+  font-size: rem(32);
+  line-height: rem(43);
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: local('JetBrainsMono'),
+       url('/assets/fonts/static/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: local('JetBrainsMono'),
+       url('/assets/fonts/static/JetBrainsMono-BoldItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: local('JetBrainsMono'),
+       url('/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: local('JetBrainsMono'),
+       url('/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 200;
+}
+
+* {
+  font-family: 'JetBrainsMono';
+  font-weight: 400;
+  color: var(--grey);
+}
