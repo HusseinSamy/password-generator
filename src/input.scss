@@ -1,0 +1,172 @@
+// ========================
+// ========================
+// RANGE INPUT STYLES
+// ========================
+// ========================
+
+
+  // Reset the default appearance
+  input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: var(--very-dark-grey);
+    background-image: linear-gradient(var(--neon-green), var(--neon-green));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+
+
+
+
+
+  // Reset the thumb appearance
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: rem(28);
+    width: rem(28);
+    border-radius: 100%;
+    background: var(--almost-white);
+    cursor: pointer;
+    margin-top: rem(-9);
+  }
+
+  input[type=range]::-moz-range-thumb {
+    height: rem(28);
+    width: rem(28);
+    border-radius: 100%;
+    background: var(--almost-white);
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-thumb {
+    height: rem(28);
+    width: rem(28);
+    border-radius: 100%;
+    background: var(--almost-white);
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  // Change the thumb color on hover
+  input[type=range]::-webkit-slider-thumb:hover {
+    transition: all 0.1s ease-in;
+    background: var(--very-dark-grey);
+    border: 1px solid var(--neon-green);
+  }
+
+  input[type=range]::-moz-range-thumb:hover {
+    transition: all 0.1s ease-in;
+    background: var(--very-dark-grey);
+    border: 1px solid var(--neon-green);
+  }
+
+  input[type=range]::-ms-thumb:hover {
+    transition: all 0.1s ease-in;
+    background: var(--very-dark-grey);
+    border: 1px solid var(--neon-green);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: rem(8);
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    background: var(--very-dark-grey);
+    height: rem(8);
+    cursor: pointer;
+    background: var(--very-dark-grey);
+    border: none;
+    box-shadow: none;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    background: var(--very-dark-grey);
+    height: rem(8);
+    cursor: pointer;
+    background: var(--very-dark-grey);
+    border: none;
+    box-shadow: none;
+  }
+
+
+
+
+
+
+
+
+
+// ========================
+// ========================
+// CHECKBOX INPUT STYLES
+// ========================
+// ========================
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid var(--almost-white);
+  width: rem(20);
+  height: rem(20);
+  transition: all 0.1s ease-in;
+}
+
+[type="checkbox"]:checked {
+  // background: var(--neon-green);
+  background: url('/assets/images/icon-check.svg') var(--neon-green) no-repeat center center;
+  border: none;
+
+}
+
+
+
