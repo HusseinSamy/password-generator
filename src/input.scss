@@ -168,5 +168,14 @@
 
 }
 
+[type="checkbox"]:not(:checked):hover {
+  border: 2px solid var(--neon-green);
+  cursor: pointer;
+}
+
+[type="checkbox"]:checked:hover {
+  cursor: pointer;
+}
+
 
 
