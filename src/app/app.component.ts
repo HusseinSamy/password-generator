@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'password-generator';
   password: string = "";
-  passwordPlaceholder: string = "P4$5w0rD!"
+  passwordPlaceholder: string = "P4$5W0rD!"
   copied: boolean = false;
   upperCase: boolean = false;
   lowerCase: boolean = false;
