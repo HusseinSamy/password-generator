@@ -69,6 +69,26 @@ h2{
   line-height: rem(23);
 }
 
+.--red-bg{
+  background-color: var(--red);
+  border: none;
+}
+
+.--orange-bg{
+  background-color: var(--orange);
+  border: none;
+}
+
+.--yellow-bg{
+  background-color: var(--yellow);
+  border: none;
+}
+
+.--green-bg{
+  background-color: var(--neon-green);
+  border: none;
+}
+
 * {
   font-family: 'JetBrainsMono';
   font-weight: 400;
