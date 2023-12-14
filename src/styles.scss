@@ -11,20 +11,10 @@
   --yellow: #F8CD65;
 }
 
-body{
-  margin: 0;
-}
-
-h1{
-  font-size: rem(24);
-  line-height: rem(31);
-  margin: 0;
-}
-
-h2{
-  font-size: rem(32);
-  line-height: rem(43);
-  margin: 0;
+* {
+  font-family: 'JetBrainsMono';
+  font-weight: 400;
+  color: var(--grey);
 }
 
 @font-face {
@@ -54,6 +44,24 @@ h2{
   font-style: italic;
   font-weight: 200;
 }
+
+
+body{
+  margin: 0;
+}
+
+h1{
+  font-size: rem(24);
+  line-height: rem(31);
+  margin: 0;
+}
+
+h2{
+  font-size: rem(32);
+  line-height: rem(43);
+  margin: 0;
+}
+
 .--large-font{
   font-size: rem(32);
   line-height: rem(43);
@@ -87,10 +95,4 @@ h2{
 .--green-bg{
   background-color: var(--neon-green);
   border: none;
-}
-
-* {
-  font-family: 'JetBrainsMono';
-  font-weight: 400;
-  color: var(--grey);
 }
