@@ -6,20 +6,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'password-generator';
-  password: string = "PTx1f5DaFX";
+  password: string = "";
+  passwordPlaceholder: string = "P4$5w0rD!"
   copied: boolean = false;
-  upperCase: boolean = true;
-  lowerCase: boolean = true;
-  includeNumbers: boolean = true;
+  upperCase: boolean = false;
+  lowerCase: boolean = false;
+  includeNumbers: boolean = false;
   includeSymbols: boolean = false;
-  passwordLength: number = 10;
+  passwordLength: number = 0;
   strengthMeter: number = 0; // 1-4
-  strength: string = "MEDIUM";
-  oldStrengthClass: string = "--yellow-bg";
+  strength: string = "";
+  oldStrengthClass: string = "";
 
 
   ngOnInit() {
-    this.calculatePasswordStrength();
+    // this.calculatePasswordStrength();
   }
 
   styleRangeInput(e: any) {
@@ -86,12 +87,20 @@ export class AppComponent {
       this.removePreviousColor();
     }
     let strength = 0;
-    if (this.passwordLength > 8) strength++;
-    if (this.includeSymbols) strength++;
-    if (this.includeNumbers) strength++;
-    if (this.upperCase) strength++;
-    this.strengthMeter = strength;
-    this.paintStrength();
+    if (this.passwordLength > 0) {
+      if ((this.lowerCase || this.upperCase || this.includeNumbers || this.includeSymbols) && this.passwordLength > 8) strength++;
+      if (this.includeSymbols) strength++;
+      if (this.includeNumbers) strength++;
+      if (this.upperCase) strength++;
+    }
+    if (strength == 0) {
+      if ((this.lowerCase || this.upperCase || this.includeNumbers || this.includeSymbols) && this.passwordLength > 0) strength++;
+    }
+    if (strength > 0) {
+      this.strengthMeter = strength;
+      this.removePreviousEmptyBar();
+      this.paintStrength();
+    }
 
   }
 
