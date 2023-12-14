@@ -87,17 +87,12 @@ export class AppComponent {
     }
     let strength = 0;
     if (this.passwordLength > 8) strength++;
-    if (this.includeSymbols && this.passwordLength > 3) strength++;
-    if (this.includeNumbers && this.passwordLength > 3) strength++;
-    if (this.upperCase && this.passwordLength > 3) strength++;
-    if (strength == 0 || (this.passwordLength < 8 && strength == 1)) {
-      if ((this.lowerCase || this.upperCase || this.includeNumbers || this.includeSymbols) && this.passwordLength > 0) { console.log(true);  strength++ };
-    }
-    if (strength > 0) {
-      this.strengthMeter = strength;
-      this.removePreviousEmptyBar();
-      this.paintStrength();
-    }
+    if (this.includeSymbols) strength++;
+    if (this.includeNumbers) strength++;
+    if (this.upperCase) strength++;
+    this.strengthMeter = strength;
+    this.paintStrength();
+
   }
 
 
