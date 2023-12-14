@@ -1,30 +1,50 @@
 @import '/src/px-to-rem.scss';
 main{
   background-color: var(--very-dark-grey);
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-top: 6.4rem;
+}
+
+.copy-icon-mobile, .copy-icon-desktop{
+  fill: #A4FFAF;
+}
+.copy-icon-mobile:hover, .copy-icon-desktop:hover{
+  fill: var(--almost-white);
+  cursor: pointer;
+  transition: fill 0.2s ease-out;
+}
+
+.copy-icon-mobile{
+  display: none;
 }
 .container{
-  margin-top: rem(-2);
-  margin-left: rem(-5);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: rem(705);
   gap: rem(24);
   width: 100%;
+  max-width: rem(540);
 }
 
 .header-password__container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: rem(143);
   justify-content: space-between;
   gap: rem(31);
+}
+
+.password{
+  max-width: 90%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 
@@ -35,6 +55,14 @@ main{
   height: rem(42);
   background-color: var(--dark-grey);
   padding: rem(19) rem(32);
+
+  .password__copy-to-clipboard{
+    display: flex;
+    gap: rem(10);
+    .copy-to-clipboard__keword{
+      color: #A4FFAF;
+    }
+  }
   h2{
     color: var(--almost-white);
   }
@@ -50,7 +78,7 @@ main{
   height: rem(460);
   flex-shrink: 0;
   background-color: var(--dark-grey);
-  padding: rem(34) rem(32);
+  padding: rem(36) rem(32) rem(32)rem(32);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -61,11 +89,9 @@ main{
     width: 100%;
     label{
       display: flex;
-      font-weight: 200;
       justify-content: space-between;
-      font-size: rem(18);
-      line-height: rem(20);
-      margin-bottom: rem(29);
+      margin-bottom: rem(27);
+      line-height: rem(20) !important;
       color: var(--almost-white);
 
       .character-length-value{
@@ -81,10 +107,8 @@ main{
     .password-options__option{
       display: flex;
       gap: rem(24);
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: rem(20);
-      font-size: rem(18);
-      line-height: rem(23);
       label{
         color: var(--almost-white);
       }
@@ -99,16 +123,13 @@ main{
 
 .strength-meter{
   width: rem(412);
-  margin-top: rem(-2);
-  margin-left: rem(1);
+  margin-top: rem(-3);
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--very-dark-grey);
   padding: rem(20) rem(32);
   .strength-meter__keyword{
-    font-size: rem(18);
-    line-height: rem(23);
     color: var(--grey);
     margin: 0;
   }
@@ -117,18 +138,15 @@ main{
     margin-top: rem(2);
     gap: rem(15.5);
     .indicator__keyword{
-      font-size: rem(24);
-      line-height: rem(31);
       color: var(--almost-white);
       margin: 0;
     }
   }
 
-  .strength-bar-container{
+  #strength-bar-container{
     display: flex;
     gap: rem(8);
-    .strength-bar-fill{
-      background-color: var(--yellow);
+    .strength-bar{
       width: rem(10);
       height: rem(28);
     }
@@ -146,8 +164,6 @@ main{
   .generate-button{
     padding-top: rem(21);
     padding-bottom: rem(21);
-    font-size: 1.125rem;
-    line-height: 1.4375rem;
     color: var(--very-dark-grey);
     background-color: var(--neon-green);
     border: none;
@@ -155,10 +171,23 @@ main{
     justify-content: center;
     align-items: center;
     gap: rem(24);
+    box-sizing: content-box;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    margin-top: rem(-3);
+    transition: all 0.2s ease-in-out;
+    margin-top: rem(-4);
+    path{
+      fill: #24232C;
+    }
+
     &:hover{
-      background-color: var(--orange);
+      padding-top: rem(19);
+      padding-bottom: rem(19);
+      border: 2px solid var(--neon-green);
+      background-color: var(--very-dark-grey);
+      color: var(--neon-green);
+      path{
+        fill: var(--neon-green);
+      }
     }
   }
+
