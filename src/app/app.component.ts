@@ -82,14 +82,22 @@ export class AppComponent {
 
 
   calculatePasswordStrength() {
+    if ((this.lowerCase || this.upperCase || this.includeNumbers || this.includeSymbols) && this.passwordLength > 0) {
+      this.removePreviousColor();
+    }
     let strength = 0;
     if (this.passwordLength > 8) strength++;
-    if (this.includeSymbols) strength++;
-    if (this.includeNumbers) strength++;
-    if (this.upperCase) strength++;
-    this.strengthMeter = strength;
-    this.paintStrength();
-
+    if (this.includeSymbols && this.passwordLength > 3) strength++;
+    if (this.includeNumbers && this.passwordLength > 3) strength++;
+    if (this.upperCase && this.passwordLength > 3) strength++;
+    if (strength == 0 || (this.passwordLength < 8 && strength == 1)) {
+      if ((this.lowerCase || this.upperCase || this.includeNumbers || this.includeSymbols) && this.passwordLength > 0) { console.log(true);  strength++ };
+    }
+    if (strength > 0) {
+      this.strengthMeter = strength;
+      this.removePreviousEmptyBar();
+      this.paintStrength();
+    }
   }
 
 
@@ -97,16 +105,22 @@ export class AppComponent {
   removePreviousColor() {
     const strengthBar = document.getElementsByClassName('strength-bar');
     if (strengthBar) {
-      console.log(this.oldStrengthClass)
       for (let i = 0; i < this.strengthMeter; i++) {
         strengthBar[i].classList.remove(this.oldStrengthClass)
-        strengthBar[i].classList.remove('strength-bar-empty')
-        console.log(strengthBar[i].classList)
       }
     }
   }
+
+  removePreviousEmptyBar() {
+    const strengthBar = document.getElementsByClassName('strength-bar');
+    if (strengthBar) {
+      for (let i = 0; i < this.strengthMeter; i++) {
+        strengthBar[i].classList.remove('strength-bar-empty')
+      }
+    }
+  }
+
   paintStrength() {
-    this.removePreviousColor();
     const strengthBar = document.getElementsByClassName('strength-bar');
 
     if (strengthBar && this.strengthMeter >= 1 && this.strengthMeter <= 4) {
