@@ -191,3 +191,109 @@ main{
     }
   }
 
+
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: rem(16);
+    line-height: rem(31);
+    margin: 0;
+  }
+
+  h2{
+    font-size: rem(24);
+    line-height: rem(44);
+    margin: 0;
+  }
+
+  main{
+    padding-top: 0rem;
+  }
+
+  .--small-font{
+    font-size: rem(16);
+    line-height: rem(20);
+  }
+
+  .--medium-font{
+    font-size: rem(18);
+    line-height: rem(27);
+  }
+
+  .container{
+    padding: 3.7rem;
+    gap:rem(16);
+  }
+  .password__container{
+    width: rem(312);
+    padding: rem(11) rem(15) rem(11) rem(16);
+
+  }
+
+  .header-password__container{
+    gap: 0.7rem;
+    justify-content: flex-start;
+  }
+
+  .copy-icon-mobile{
+    display: block;
+  }
+  .copy-icon-desktop{
+    display: none;
+  }
+
+  .main-container{
+    width: rem(310);
+    height: 100%;
+    padding: rem(16) rem(16) rem(16) rem(16);
+    gap: rem(16);
+
+    .password-length{
+      label{
+        font-size: rem(16);
+        line-height: rem(20);
+        align-items: center;
+        margin-bottom: 0.6rem;
+
+        span{
+          font-size: rem(24) !important;
+          line-height: rem(31);
+        }
+      }
+    }
+
+    .password-options{
+      .password-options__option{
+        gap: rem(20);
+        align-items: center;
+        margin-bottom: rem(17);
+        label{
+          color: var(--almost-white);
+        }
+      }
+
+      .password-options__option:last-child{
+        margin-bottom: 0;
+      }
+
+      .password-options__option:first-child{
+        margin-top: 1.4rem;
+      }
+    }
+  }
+
+  .strength-meter{
+    width: rem(278);
+    margin-top: rem(16);
+    padding: rem(13) rem(16);
+    margin-left: 0;
+  }
+
+  .generate-button{
+    gap: rem(16);
+    padding-top: rem(18);
+    padding-bottom: rem(18);
+    margin-top: 0;
+  }
+}
+
+
