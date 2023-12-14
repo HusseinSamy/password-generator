@@ -54,6 +54,20 @@ h2{
   font-style: italic;
   font-weight: 200;
 }
+.--large-font{
+  font-size: rem(32);
+  line-height: rem(43);
+}
+
+.--medium-font{
+  font-size: rem(24);
+  line-height: rem(31);
+}
+
+.--small-font{
+  font-size: rem(18);
+  line-height: rem(23);
+}
 
 * {
   font-family: 'JetBrainsMono';
