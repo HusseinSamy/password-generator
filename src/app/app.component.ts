@@ -24,7 +24,7 @@ export class AppComponent implements  OnInit {
   ngOnInit() {}
 
   styleRangeInput(e: any) {
-    let target = e.target
+    const target = e.target
     if (target.type == 'range') {
       const min = target.min
       const max = target.max
