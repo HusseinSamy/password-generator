@@ -20,8 +20,8 @@ export class AppComponent {
 
 
   ngOnInit() {
-    // this.calculatePasswordStrength();
-  }
+
+  ngOnInit() {}
 
   styleRangeInput(e: any) {
     let target = e.target
