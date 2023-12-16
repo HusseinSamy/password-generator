@@ -42,7 +42,7 @@ export class AppComponent implements  OnInit {
       , 3000);
   }
 
-  generate(length: number, useSymbols: boolean, useUppercase: boolean, useLowercase: boolean, useNumbers: boolean) {
+  private generate(length: number, useSymbols: boolean, useUppercase: boolean, useLowercase: boolean, useNumbers: boolean) {
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
     const numberChars = '0123456789';
