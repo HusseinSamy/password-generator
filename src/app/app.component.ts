@@ -19,7 +19,7 @@ export class AppComponent {
   oldStrengthClass: string = "";
 
 
-  ngOnInit() {
+  constructor() { }
 
   ngOnInit() {}
 
