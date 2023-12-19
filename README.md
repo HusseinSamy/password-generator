@@ -28,9 +28,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://ultimate-password-generator.netlify.app)
+- [Solution URL](https://www.frontendmentor.io/solutions/pixel-perfect-responsive-password-generator-n1vYBIZlun)
+- [Live Site URL](https://ultimate-password-generator.netlify.app)
 
 ### Built with
 
-- Angular 
+- Angular
+- SCSS
