@@ -11,7 +11,8 @@ main{
 }
 
 .--placeholder{
-  color: var(--grey) !important;
+  color: var(--almost-white) !important;
+  opacity: 0.25;
 }
 
 .copy-icon-mobile, .copy-icon-desktop{
@@ -178,7 +179,6 @@ main{
     box-sizing: content-box;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin-top: rem(-4);
     path{
       fill: #24232C;
     }
